@@ -1,22 +1,17 @@
-#define _CRT_SECURE_NO_WARNINGS
-# include <stdio.h>
+#include <stdio.h>
+#define convert(x) ((9.0/5.0)*x)+32
 
-int main()
-{
+int main() {
+	float a, b, c;
 
-	int input = 0;
-	printf("4자리 정수 입력");
-	scanf("%d", &input);
+	printf("섭씨온도 3개 입력: ");
+	scanf_s("%f %f %f", &a, &b, &c);
 
-	printf("%10\n", input);
-	printf("%010d\n", input);
-	printf("%+010d\n", input);
-	printf("%d\n", input);
-	printf("%10o\n", input);
-	printf("%01o\n", input);
-	printf("%10x\n", input);
-	printf("%010x\n", input);
+	a = convert(a);
+	b = convert(b);
+	c = convert(c);
+
+	printf("%,4f, %,4f %,4f\n", a, b, c);
 
 	return 0;
-
 }
